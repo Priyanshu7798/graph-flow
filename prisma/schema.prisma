@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../lib/generated/prisma"
 }
 
 datasource db {
@@ -21,8 +20,8 @@ model Workflow {
   status String
 
   createdAt DateTime @default(now())
-  updateAT DateTime @updatedAt
+  updatedAt DateTime @updatedAt
 
-  // user cant have 2 workflow with same name
-  @@unique([name ,userId])
+  // user must be unique
+  @@unique([name,userId])
 }

@@ -7,7 +7,7 @@ CREATE TABLE "Workflow" (
     "definition" TEXT NOT NULL,
     "status" TEXT NOT NULL,
     "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updateAT" DATETIME NOT NULL
+    "updatedAt" DATETIME NOT NULL
 );
 
 -- CreateIndex
