@@ -1,4 +1,4 @@
-
+export const dynamic = "force-dynamic"; // <-- Important
 
 import React from 'react'
 import { Alert, AlertDescription } from './ui/alert';
