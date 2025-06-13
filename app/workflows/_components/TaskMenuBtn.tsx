@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import { Button } from '@/components/ui/button'
 import { TaskRegistry } from '@/lib/workflow/task/registry'

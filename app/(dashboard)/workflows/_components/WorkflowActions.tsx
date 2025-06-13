@@ -1,3 +1,7 @@
+"use client"
+
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import React,{useState} from 'react'
 import { DropdownMenu , DropdownMenuContent , DropdownMenuItem , DropdownMenuTrigger, DropdownMenuSeparator , DropdownMenuLabel } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'

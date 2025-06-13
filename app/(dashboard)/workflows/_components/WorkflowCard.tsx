@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import { buttonVariants } from '@/components/ui/button'
 import { Card,CardContent } from '@/components/ui/card'
 import { cn } from '@/lib/utils'

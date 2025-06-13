@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import CustomDialogHeader from '@/components/CustomDialogHeader';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';

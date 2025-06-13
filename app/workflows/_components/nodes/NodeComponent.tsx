@@ -1,3 +1,6 @@
+
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import { NodeProps } from "@xyflow/react";
 import { memo } from "react";
 import NodeCard from "./NodeCard";

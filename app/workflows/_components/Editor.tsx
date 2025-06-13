@@ -1,4 +1,6 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import { Workflow } from '@prisma/client'
 import React from 'react'
 import {ReactFlowProvider} from '@xyflow/react'

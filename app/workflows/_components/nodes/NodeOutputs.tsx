@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import React from 'react'
 

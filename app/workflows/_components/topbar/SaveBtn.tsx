@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import { updateWorkflow } from '@/actions/workflows/updateWorkflow'
 import { Button } from '@/components/ui/button'

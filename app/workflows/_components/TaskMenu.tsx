@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { TaskType } from '@/types/task'

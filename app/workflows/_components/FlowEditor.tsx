@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import { Workflow } from '@prisma/client'
 import { Background, BackgroundVariant, Controls, ReactFlow, useEdgesState, useNodesState, useReactFlow } from '@xyflow/react'
 import React, { useCallback, useEffect } from 'react'

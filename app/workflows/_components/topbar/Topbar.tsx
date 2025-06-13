@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import TooltipWrapper from '@/components/TooltipWrapper'
 import { Button } from '@/components/ui/button'

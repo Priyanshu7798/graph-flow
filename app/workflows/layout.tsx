@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic"; // ⬅️ Add this
+
 import Logo from '@/components/Logo'
 import { ModeToggle } from '@/components/ThemeModeToggle'
 import { Separator } from '@/components/ui/separator'

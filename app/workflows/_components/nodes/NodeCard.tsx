@@ -1,4 +1,5 @@
 "use client"
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 
 import { cn } from "@/lib/utils"
 import { useReactFlow } from "@xyflow/react"

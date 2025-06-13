@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic"; // ⬅️ Add this
 import { Loader2Icon } from 'lucide-react'
 import React from 'react'
 
