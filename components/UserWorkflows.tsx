@@ -4,7 +4,7 @@ import React from 'react'
 import { Alert, AlertDescription } from './ui/alert';
 import { AlertCircle, InboxIcon } from 'lucide-react';
 import { GetWorkflowsForUser } from '@/actions/workflows/getWorkflowsForUser';
-import WorkflowCard from '@/app/(dashboard)/workflow/_components/WorkflowCard';
+import WorkflowCard from '@/app/(dashboard)/workflows/_components/WorkflowCard';
 
 async function UserWorkflows() {
 
