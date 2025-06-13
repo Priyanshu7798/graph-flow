@@ -1,11 +1,17 @@
 export enum TaskType {
   LAUNCH_BROWSER = "LAUNCH_BROWSER",
+  OPENAI_CALL = "OPENAI_CALL",
+  PAGE_TO_HTML = "PAGE_TO_HTML"
 }
 
 export enum TaskParamType {
   STRING = "STRING",
   NUMBER = "NUMBER",
   BOOLEAN = "BOOLEAN",
+  OBJECT = "OBJECT",
+  TEXTAREA = "TEXTAREA",
+  SELECT  = "SELECT",
+  BROWSER_INSTANCE = "BROWSER_INSTANCE"
 }
 
 export interface TaskParam {
