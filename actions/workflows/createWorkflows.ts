@@ -17,10 +17,16 @@ export async function CreateWorkflows(form : createWorkflowSchemaType) {
     throw new Error("Inavlid from data")
   }
 
-  const {userId} = auth();
+  let userId: string | null = null;
+  try {
+    const authResult = auth();
+    userId = authResult.userId;
+  } catch (err) {
+    console.error("auth() failed:", err);
+  }
 
-  if(!userId) {
-    throw new Error("User not found")
+  if (!userId) {
+    throw new Error("User not found");
   }
 
   const initialFlow : {nodes:AppNode[]; edges: Edge[] } = {
