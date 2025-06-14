@@ -8,14 +8,18 @@ import WorkflowCard from '@/app/(dashboard)/workflows/_components/WorkflowCard';
 
 async function UserWorkflows() {
 
-  const workflows = await GetWorkflowsForUser()
-  if(!workflows){
+ let workflows = [];
+
+  try {
+    workflows = await GetWorkflowsForUser();
+  } catch (error) {
+    console.error("GetWorkflowsForUser failed:", error);
     return (
-      <Alert variant ="destructive">
+      <Alert variant="destructive">
         <AlertCircle className="h-4 w-4" />
-        <AlertDescription>Something went wrong</AlertDescription>
+        <AlertDescription>Something went wrong while fetching workflows.</AlertDescription>
       </Alert>
-    )
+    );
   }
 
   if(workflows.length===0){
