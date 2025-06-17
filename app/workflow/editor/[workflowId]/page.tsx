@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+"use server"
 
 import prisma from '@/lib/prisma'
 import { auth } from '@clerk/nextjs/server'
@@ -32,8 +32,6 @@ async function page({params}: {params: {workflowId: string}}) {
       <div>Workflow not found</div>
     )
   }
-
-  
 
   return (
     <Editor workflow={workflow} />
