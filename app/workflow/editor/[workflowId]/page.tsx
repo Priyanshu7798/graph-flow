@@ -1,12 +1,11 @@
-"use server"
+export const dynamic = "force-dynamic";
 
 import prisma from '@/lib/prisma'
 import { auth } from '@clerk/nextjs/server'
 import React from 'react'
 import Editor from '../../_components/Editor'
 
-async function page({params}: {params: {workflowId: string}}) {
-
+async function page({ params }: { params: { workflowId: string } }) {
   const workflowId = params.workflowId
   let userId: string | null = null;
 
@@ -18,24 +17,28 @@ async function page({params}: {params: {workflowId: string}}) {
   }
 
   if (!userId) {
+    console.error("No userId found");
     return <div>Unauthenticated</div>;
   }
-  const workflow = await prisma.workflow.findUnique({
-    where: {
-      id: workflowId,
-      userId,
-    },
-  });
 
-  if(!workflow){
-    return(
-      <div>Workflow not found</div>
-    )
+  let workflow = null;
+  try {
+    workflow = await prisma.workflow.findUnique({
+      where: {
+        id: workflowId,
+        userId,
+      },
+    });
+  } catch (err) {
+    console.error("prisma.workflow.findUnique failed:", err);
   }
 
-  return (
-    <Editor workflow={workflow} />
-  )
+  if (!workflow) {
+    console.error("Workflow not found for id:", workflowId, "and userId:", userId);
+    return <div>Workflow not found</div>;
+  }
+
+  return <Editor workflow={workflow} />
 }
 
 export default page
